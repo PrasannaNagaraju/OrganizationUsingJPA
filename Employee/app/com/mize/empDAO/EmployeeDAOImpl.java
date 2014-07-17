@@ -39,7 +39,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {
-			play.Logger.error("INTERNAL Server Exception"+e.getMessage());
+			play.Logger.error(" Exception"+e.getMessage(),e);
 			
 		}
 
@@ -70,7 +70,8 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			}
 		} catch (ClassNotFoundException | SQLException e) {
 			
-			play.Logger.error("INTERNAL Server Exception"+e.getMessage());
+			play.Logger.error("Exception"+e.getMessage(),e);
+			
 		}
 
 		return list;
@@ -90,7 +91,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			if (s != 0)
 				return true;
 		} catch (ClassNotFoundException | SQLException e) {
-			play.Logger.error("INTERNAL Server Exception"+e.getMessage());
+			play.Logger.error(" Exception"+e.getMessage(),e);
 		}
 		return false;
 	}
@@ -114,7 +115,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				return employee;
 			}
 		} catch (Exception e) {
-			play.Logger.error("INTERNAL Server Exception"+e.getMessage());
+			play.Logger.error("Exception"+e.getMessage(),e);
 		}
 		return null;
 	}
@@ -135,7 +136,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 				return true;
 		} catch (Exception e) {
 			
-			play.Logger.error("INTERNAL Server Exception"+e.getMessage());
+			play.Logger.error("Exception"+e.getMessage(),e);
 		}
 		return false;
 	}

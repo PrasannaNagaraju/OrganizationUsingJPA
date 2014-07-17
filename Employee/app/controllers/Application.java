@@ -31,7 +31,7 @@ public class Application extends Controller {
 			}
 		} else {
 			play.Logger.error("Invalid Id");
-			return ok("Invalid Id");
+			return badRequest("Invalid Id");
 		}
 	}
 
@@ -42,14 +42,14 @@ public class Application extends Controller {
 			Employee emp = Json.fromJson(json, Employee.class);
 			if (service.insertIntoemployees(emp)) {
 				play.Logger.info("Record Insertion successfull...!");
-				return ok("record inserted successfully..");
+				return internalServerError("record inserted successfully..");
 			} else {
 				play.Logger.error("Record insertion failed");
 				return ok("record insertionn failed..");
 			}
 		} else {
 			play.Logger.error("Invalid Insertion Operation");
-			return ok("Invalid Insertion operation");
+			return badRequest("Invalid Insertion operation");
 		}
 
 	}
@@ -58,7 +58,7 @@ public class Application extends Controller {
 		List<Employee> list = service.getAllEmployees();
 		if (list == null) {
 			play.Logger.error("Empty List...!");
-			return ok("Empty List");
+			return notFound("Empty List");
 		} else {
 			play.Logger.info("Displaying Employee List...!");
 			return ok(Json.toJson(list));
@@ -74,10 +74,10 @@ public class Application extends Controller {
 				return ok("record updated successfully...!");
 			}
 			play.Logger.error("Record Updation failed...!");
-			return ok("record updation failed...!");
+			return internalServerError("record updation failed...!");
 		} else {
 			play.Logger.error("Invalid Update Operation");
-			return ok("Invalid Update operation");
+			return badRequest("Invalid Update operation");
 		}
 
 	}
