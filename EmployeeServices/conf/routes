@@ -4,14 +4,11 @@
 
 # Home page
 
-GET		/getEmployees							controllers.Application.getEmployees()			
-POST	/getEmpById							controllers.Application.getEmpById()
-POST	/getEmpByDep							controllers.Application.getEmpByDep()
-POST	/insertEmployee							controllers.Application.insertEmployee()
-POST	/updateEmployee							controllers.Application.updateEmployee()
-POST	/deleteEmployee							controllers.Application.deleteEmployee()
-#GET     /getAvgSalByDept                          controllers.Application.getAvgSalByDept()
-GET		/getEmpCount							controllers.Application.getEmpCount()
+GET		/getEmployees						@controllers.Application.getEmployees()			
+POST	/getEmpById							@controllers.Application.getEmpById()
+POST	/getEmpByDep						@controllers.Application.getEmpByDep()
+POST	/insertEmployee							@controllers.Application.insertEmployee()
+POST	/updateEmployee							@controllers.Application.updateEmployee()
 
 
 

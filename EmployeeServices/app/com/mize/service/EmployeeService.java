@@ -7,24 +7,24 @@ import com.mize.dto.Employee;
 
 public interface EmployeeService {
 
-	//public abstract void setEmployeeDAO(EmployeeDAOImpl employeeDAO);
+	//public void setEmployeeDAO(EmployeeDAOImpl employeeDAO);
 
-	public abstract List<Employee> findAll();
+	public List<Employee> findAll();
 
-	public abstract Employee findById(Employee emp);
+	public Employee findById(Employee emp);
 
-	public abstract List<Employee> findByDepartment(Employee emp);
+	public List<Employee> findByDepartment(Employee emp);
 
-	public abstract boolean insertEmployee(Employee employee);
+	public boolean insertEmployee(Employee employee);
 
-	public abstract boolean updateEmployee(Employee employee);
+	public boolean updateEmployee(Employee employee);
 
-	public abstract boolean deleteEmployeeById(Employee emp);
+	public boolean deleteEmployeeById(Employee emp);
 
-	public abstract int getAverageSalary();
+	public int getAverageSalary();
 
-	public abstract List<Map<String, Object>> getAvgSalByDept();
+	public List<Map<String, Object>> getAvgSalByDept();
 
-	public abstract int empCount();
+	public int empCount();
 
 }
