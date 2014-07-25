@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /index                           @controllers.Application.index()
+GET 	/getAllOrganizations			@controllers.Application.getAllOrganizations()
+POST 	/getOrgById						@controllers.Application.getOrgById()
+POST	/addOrg							@controllers.Application.addOrg()
+POST	/removeOrg						@controllers.Application.removeOrg()
+POST	/updateOrg						@controllers.Application.updateOrg()
+POST	/getOrgByCode					@controllers.Application.getOrgByCode()
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
